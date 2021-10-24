@@ -27,7 +27,7 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question
-    question.answer.forEach(answer => {
+    question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
@@ -75,9 +75,44 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 const questions = [{
-    question: 'What is 2 + 2 ?',
-    answers: [
-        { text: '4', correct: true },
-        { text: '22', correct: false }
-    ]
-}]
+        question: 'What is 2 + 2 ?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false }
+        ]
+    },
+    {
+        question: 'Who Is The Best YouTuber?',
+        answers: [
+            { text: 'Web Dev Simplified', correct: true },
+            { text: 'Traversy Media', correct: true },
+            { text: 'Dev Ed', correct: true },
+            { text: 'Fun Fun Function', correct: true }
+        ]
+    },
+    {
+        question: 'What is 2 × 2 ?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '2', correct: false }
+        ]
+    },
+    {
+        question: 'Is Web Development Funny?',
+        answers: [
+            { text: 'Kinda', correct: false },
+            { text: 'Yes!!!', correct: true },
+            { text: 'Ummm No!!!', correct: false },
+            { text: 'IDK', correct: false }
+        ]
+    },
+    {
+        question: 'Who Is The Best Author?',
+        answers: [
+            { text: 'William Shakespeare', correct: true },
+            { text: 'Barbara Cartland', correct: true },
+            { text: 'Harold Robbins', correct: true },
+            { text: 'Agatha Christie', correct: true },
+        ]
+    },
+]
